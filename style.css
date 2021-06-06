@@ -18,6 +18,10 @@ header{
 .header-content{
     padding: 1.2rem;
 }
+.nav-link-custom a{
+    text-decoration: none;
+    color: black;
+}
 .header-head{
     font-size: 3rem;
     text-align: center;
@@ -27,6 +31,9 @@ header{
     text-align: center;
     opacity: 50%;
     font-size: 1.1rem;
+}
+.social{
+    margin-top: 1rem;
 }
 .header-btn{
     color: white;
@@ -76,11 +83,7 @@ font-size: small;
   
 }
 
-.nav-custom-items-res {
-    position: absolute;
-    width: 95%;
-    top: 15%;
-}
+
 .nav-custom-items-links {
     text-align: center;
     padding: 1rem;
@@ -195,6 +198,11 @@ form{
     position: relative;
 
 }
+
+/* responsive nav */
+
+
+
 .banner-heading{
     color: white;
     position: relative;
@@ -266,19 +274,43 @@ ul{
     text-transform: capitalize;
 }
 .f1-li{
-    opacity: 50%;
     margin-top: 0.5rem;
+}
+.f1-li a{
+    opacity: 50%;
 }
 a{
     text-decoration: none;
     color: white;
 }
-.f1-li:hover{
+.f1-li a:hover{
     color: hsl(180, 66%, 49%);
     opacity: 100%;
 }
 .nav-links-custom{
     display: none;
+}
+.custom-nav-bar-active{
+    position: relative;
+}
+.nav-links-custom-active{
+    position: absolute;
+    background: hsl(257, 27%, 26%);
+    top: 120%;
+    width: 100%;
+    text-align: center;
+    padding: 1.2rem;
+    left: 0;
+    border-radius: 14px;
+    display: block;
+}
+
+.nav-link-custom {
+    margin-top: 1rem;
+    font-size: large;
+}
+.nav-link-custom a{
+    color: white;
 }
 
 .boost-desktop{
@@ -303,6 +335,11 @@ a{
 }
 ul{
     margin: 0%;
+    padding: 0;
+}
+.footer-1{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .nav-link-custom:not(.signup){
     opacity: 50%;
@@ -332,15 +369,37 @@ ul{
         display: none;
     }
 }
-@media(min-width:576px){
-    .nav-custom-items-res{
-        width: 70%;
-        top: 15%;
-        right: 5%;
-    }
-}
+
 
 @media(min-width:768px){
+    .footer-1{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .nav-link-custom a{
+        color: black;
+    }
+    .nav-link-custom{
+        margin-top: 0;
+        font-size: 1rem;
+    }
+    ul{
+        padding-left: 2rem;
+    }
+
+    .nav-links-custom-active{
+        position: static;
+        background:none;
+        padding: 0;
+
+    }
+    .custom-nav-bar-active{
+        position: static;
+    }
+
+
+
+
     .nav-custom-items-res{
         display: none;
     }
@@ -487,6 +546,9 @@ ul{
     .row-para{
         width: 65%;
     margin: auto;
+    }
+    .social{
+        margin-top: 0;
     }
     
 

@@ -146,20 +146,21 @@ const Ham = document.querySelector('.responsive-ham')
 
 Ham.addEventListener('click', (e) => {
     const Link = e.target.closest('.responsive-ham')
-    const Nav = document.querySelector('.nav-custom-items-res')
+    const Nav = document.querySelector('.custom-nav-bar')
+    const Nav_custom=document.querySelector('.nav-links-custom')
     console.log(Link.firstElementChild.classList)
 
-    if (!Link.firstElementChild.classList.contains('hidden') && Nav.classList.contains('hidden')) {
+    if (!Link.firstElementChild.classList.contains('hidden')) {
 
         Link.firstElementChild.classList.add('hidden')
         Link.firstElementChild.nextElementSibling.classList.remove('hidden')
-        Nav.classList.remove('hidden')
-        Nav.classList.add('active')
+        Nav.classList.add('custom-nav-bar-active')
+        Nav_custom.classList.add('nav-links-custom-active')
 
     } else {
         Link.firstElementChild.classList.remove('hidden')
         Link.firstElementChild.nextElementSibling.classList.add('hidden')
-        Nav.classList.add('hidden')
-        Nav.classList.remove('active')
+        Nav.classList.remove('custom-nav-bar-active')
+        Nav_custom.classList.remove('nav-links-custom-active')
     }
 })
